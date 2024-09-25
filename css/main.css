@@ -33,6 +33,7 @@
 /* 프로젝트 */
 .project {}
 /* 프로젝트 소개 웹(공통) */
+.project h1 {font-size: 24px; color: #31A8FF;}
 .project .web {
     display:flex; flex-flow:row nowrap;
 }
@@ -56,12 +57,24 @@
 /* web1-오설록 */
 .project .web1 .big {background-image: url(../img/osull2.png);}
 /* web2 추가 웹에 따라 아래 선택자를 복제하여 web 클래스 뒤에 숫자를 붙이고 이미지 경로를 삽입하세요.*/
-.project .web2 .big {background-image: url();}
+.project .web2 .big {background-image: url(../img/cel2.png);}
+.project .web3 .big {background-image: url(../img/dyson2.png);}
+.project .web4 .big {background-image: url(../img/drbrown2.png);}
 /* 프로젝트 소개 디자인 공통영역 */
 .project .design {}
 /* 프로젝트 소개 디자인개별영역 ★★★★★★=============수정=============★★★★★★ */
 /* SNS디자인 및 배너디자인 등의 크기 및 원하는 모양을 수정하세요 */
-.project .sns {}
+.project .sns {height: 1000px;}
+.project .sns h2 {
+    color:#A259FF;
+    font-size: 24px;
+}
+.project .sns .contents {
+    margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+.project .sns .contents p img {width: 450px;}
 .project .bnr {}
 /* 마무리인사 */
 .end {text-align: center; padding:100px 0; background:#f1f1f1;}
