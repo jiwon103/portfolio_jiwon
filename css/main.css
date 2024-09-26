@@ -49,11 +49,14 @@
 .project .web .info p.thum {}
 .project .web .info p.thum img {max-width:300px;}
 .project .web .info .link {
-    margin:30px 0; display:flex;
-    justify-content: space-evenly;
+    margin:20px 0; display:flex;
+    /* justify-content: space-evenly; */
 }
-.project .web .info .link a {background:#B8EAFF; padding:10px 15px;}
-.project .web .info .link a:last-child {margin-left:10px;}
+.project .web .info .link a {
+    background:#B8EAFF; padding:10px 15px;
+    margin-right: 10px;
+}
+/* .project .web .info .link a:last-child {margin-left:10px;} */
 .project .web .info .link a:hover {background:#f1f1f1;}
 .project .web .info .detail {}
 .project .web .info .detail li {margin-bottom:30px;}
