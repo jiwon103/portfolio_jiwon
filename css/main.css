@@ -33,7 +33,13 @@
 /* 프로젝트 */
 .project {}
 /* 프로젝트 소개 웹(공통) */
-.project h1 {font-size: 24px; color: #31A8FF;}
+.project h1 {
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    margin: 30px;
+}
 .project .web {
     display:flex; flex-flow:row nowrap;
 }
@@ -42,7 +48,10 @@
 .project .web .info h2+p {line-height:1.9;}
 .project .web .info p.thum {}
 .project .web .info p.thum img {max-width:300px;}
-.project .web .info .link {margin:30px 0; display:flex;}
+.project .web .info .link {
+    margin:30px 0; display:flex;
+    justify-content: space-evenly;
+}
 .project .web .info .link a {background:#B8EAFF; padding:10px 15px;}
 .project .web .info .link a:last-child {margin-left:10px;}
 .project .web .info .link a:hover {background:#f1f1f1;}
@@ -66,18 +75,24 @@
 /* SNS디자인 및 배너디자인 등의 크기 및 원하는 모양을 수정하세요 */
 .project .sns {height: 1000px;}
 .project .sns h2 {
-    color:#A259FF;
+    color:#000;
     font-size: 24px;
+    text-align: center;
+    font-weight: 800;
+    margin: 30px;
 }
 .project .sns .contents {
     margin-top: 50px;
         display: flex;
         justify-content: space-around;
+        width: 1600px;
+        margin: 0 auto;
     }
-.project .sns .contents p img {width: 450px;}
+.project .sns .contents p {width: 24.5%;}
+.project .sns .contents p img {width: 100%;}
 .project .bnr {}
 /* 마무리인사 */
 .end {text-align: center; padding:100px 0; background:#f1f1f1;}
-.end h3 {margin-bottom:50px; font-size:24px;}
+.end h3 {font-size:24px;}
 .end .qr {margin:0 auto; width:200px; border-radius: 20px; overflow: hidden;}
 .end .qr img {width:100%;}
