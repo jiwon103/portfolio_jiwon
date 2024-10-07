@@ -1,3 +1,4 @@
+body > * {min-width:1900px;}
 /* 1행 인트로 */
 .intro {height:100vh;display:flex;align-items: center;justify-content: center; flex-flow:column;}
 .intro .txt {text-align:center; width:100%;}
@@ -31,7 +32,7 @@
 .profile .right .box {}
 .profile .right .box img {width:50px; margin-right:15px;}
 /* 프로젝트 */
-.project {}
+.project {margin-top:100px;}
 /* 프로젝트 소개 웹(공통) */
 .project h1 {
     font-size: 24px;
@@ -76,43 +77,43 @@
 .project .design {}
 /* 프로젝트 소개 디자인개별영역 ★★★★★★=============수정=============★★★★★★ */
 /* SNS디자인 및 배너디자인 등의 크기 및 원하는 모양을 수정하세요 */
-.project .sns {height: 1000px;}
-.project .sns h2 {
+.project .design {margin-bottom:150px;}
+.project .design h2 {
     color:#000;
     font-size: 24px;
     text-align: center;
     font-weight: 800;
     margin: 30px;
 }
-.project .sns .contents {
+.project .design .contents {
     margin-top: 50px;
         display: flex;
         justify-content: space-around;
         width: 1600px;
         margin: 0 auto;
     }
-.project .sns .contents p {
+.project .design .contents p {
     width: 24.5%;
 }
-.project .sns .contents p img {
+.project .design .contents p img {
     width: 100%;
 }
-.project .sns .contents p:last-child img {
+.project .design .contents p:last-child img {
     height: 392px;
     width: auto;
 }
-.project .sns .contents2 {
+.project .design .contents2 {
     margin-top: 50px;
         display: flex;
         /* justify-content: space-around; */
         width: 1600px;
         margin: 10px auto;
     }
-.project .sns .contents2 p {
+.project .design .contents2 p {
     width: 24.5%;
     margin-right: 10px;
 }
-.project .sns .contents2 p img {
+.project .design .contents2 p img {
     width: 100%;
 }
 .project .bnr {}

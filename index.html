@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김지원 포트폴리오</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* sns */
+        .snsSlide {width:1700px;}
+        .snsSlide .swiper-slide img {width:100%;}
+        /* banner */
+        .bannerSlide {width:1700px;}
+        .bannerSlide .swiper-slide img {width:100%;}
+        /* details */
+        .detailsSlide {width:1700px; height:700px;}
+        .detailsSlide .swiper-slide img {width:100%;}
+        /* details_big */
+        .details_big {
+            position:fixed; left:0; top:0; width:100%; height:100vh;
+            overflow-y:auto; overflow-x:auto;
+            background:rgba(0,0,0,0.5); z-index:999;
+            text-align: center; padding:30px 0;
+            display:none;
+        }
+        .details_big img {width:900px;}
+    </style>
 </head>
 <body>
     <div class="intro">
@@ -140,36 +162,117 @@
             </div>
             <div class="big"><!-- background-image CSS처리 --></div>
         </div>
-        <!-- =============수정============= -->
         <!-- SNS디자인-->
-        <div class="design sns">
+        <div class="design sns" style="margin-top:120px;">
             <h2>SNS DESIGN</h2>
-            <div class="contents">
-                <!-- SNS이미지들어갈영역 -->
-                <p><img src="img/osulloc_sns.png" alt=""></p>
-                <p><img src="img/cell_sns.png" alt=""></p>
-                <p><img src="img/dyson_sns.png" alt=""></p>
-                <p><img src="img/book_sns.png" alt=""></p>
-            </div>
-            <div class="contents2">
-                <p><img src="img/drbrown_sns.png" alt=""></p>
-                <p><img src="img/gwangdong_sns.png" alt=""></p>
-<!--                 <p><img src="img/drbrown_sns.png" alt=""></p>
-                <p><img src="img/gwangdong_sns.png" alt=""></p> -->
+            <div class="swiper snsSlide">
+                <div class="swiper-wrapper">
+                    <!-- ▶▶▶SNS광고디자인 이미지 경로 수정 부분◀◀◀ -->
+                    <div class="swiper-slide"><img src="img/osulloc_sns.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/cell_sns.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/dyson_sns.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/book_sns.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/drbrown_sns.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/gwangdong_sns.png" alt=""></div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <!-- 배너디자인-->
-        <!-- <div class="design bnr">
-            <h2>BANNER DESIGN</h2>
-            <div class="contents">
-                배너이미지들어갈영역 
+        <div class="design sns" style="margin-top:120px;">
+            <h2>Banner DESIGN</h2>
+            <div class="swiper bannerSlide">
+                <div class="swiper-wrapper">
+                    <!-- ▶▶▶배너디자인 이미지 경로 수정 부분◀◀◀ -->
+                    <div class="swiper-slide"><img src="img/bnr.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/bnr.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/bnr.png" alt=""></div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-        </div>-->
+        </div>
+        <!-- 상세페이지 디자인-->
+        <div class="design details" style="margin-top:120px;">
+            <h2>상세페이지 DESIGN</h2>
+            <p style="text-align:center; padding:0 0 30px;">클릭하면 큰 이미지로 보실 수 있습니다!</p>
+            <div class="swiper detailsSlide">
+                <div class="swiper-wrapper">
+                    <!-- ▶▶▶상세페이지 디자인 이미지 경로 수정 부분◀◀◀ -->
+                    <div class="swiper-slide de" style="cursor: pointer;"><img src="img/detail.png" alt=""></div>
+                    <div class="swiper-slide de" style="cursor: pointer;"><img src="img/detail2.png" alt=""></div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="details_big" title="클릭 시 닫힙니다!">
+                <img src="img/detail.png" alt="">
+            </div>
+        </div>
     </div>
     <!-- ★★★★★★종료 마지막 인사 영역 -->
     <div class="end">
         <h3>감사합니다!</h3>
         <div class="qr"><img src="img/kakao_qr.jpg" alt=""></div>
     </div>
+    <script>
+
+        //sns
+        const snsSlide = new Swiper('.snsSlide', {
+            autoplay:{delay:2000,},
+            loop:true,
+            slidesPerView:3,
+            spaceBetween:5,
+            navigation: {
+                nextEl: '.snsSlide .swiper-button-next',
+                prevEl: '.snsSlide .swiper-button-prev',
+            },
+        });
+
+        //banner
+        const bannerSlide = new Swiper('.bannerSlide', {
+            autoplay:{delay:2000,},
+            slidesPerView:2,
+            spaceBetween:5,
+            loop:true,
+            navigation: {
+                nextEl: '.bannerSlide .swiper-button-next',
+                prevEl: '.bannerSlide .swiper-button-prev',
+            },
+        });
+
+        //details
+        const detailsSlide = new Swiper('.detailsSlide', {
+            autoplay:{delay:2000,},
+            slidesPerView:2,
+            spaceBetween:5,
+            loop:true,
+            navigation: {
+                nextEl: '.detailsSlide .swiper-button-next',
+                prevEl: '.detailsSlide .swiper-button-prev',
+            },
+        });
+
+        //details big
+        const details = document.querySelectorAll('.detailsSlide .de img')
+        const details_big = document.querySelector('.details_big img')
+        console.log(details[0].src, details_big.src)
+
+        for(let i of details){
+            i.addEventListener('click',()=>{
+                details_big.parentElement.style.display = 'block'
+                details_big.parentElement.scrollTo(0,0)
+                details_big.src = i.src;
+            })
+        }
+        details_big.parentElement.addEventListener('click',()=>{
+            details_big.parentElement.style.display = 'none'
+        })
+
+    </script>
 </body>
 </html>
