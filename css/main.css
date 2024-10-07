@@ -101,6 +101,20 @@
     height: 392px;
     width: auto;
 }
+.project .sns .contents2 {
+    margin-top: 50px;
+        display: flex;
+        /* justify-content: space-around; */
+        width: 1600px;
+        margin: 10px auto;
+    }
+.project .sns .contents2 p {
+    width: 24.5%;
+    margin-right: 10px;
+}
+.project .sns .contents2 p img {
+    width: 100%;
+}
 .project .bnr {}
 /* 마무리인사 */
 .end {text-align: center; padding:100px 0; background:#f1f1f1;}
