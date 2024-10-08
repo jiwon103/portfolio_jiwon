@@ -116,7 +116,8 @@ body > * {min-width:1900px;}
 .project .design .contents2 p img {
     width: 100%;
 }
-.project .bnr {}
+.project .bnr {display: none;}
+.project .details {display: none;}
 /* 마무리인사 */
 .end {text-align: center; padding:100px 0; background:#f1f1f1;}
 .end h3 {font-size:24px;}
